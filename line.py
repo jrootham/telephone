@@ -12,3 +12,7 @@ class Line:
         start_x, start_y = self.start
         end_x, end_y = self.end
 
+        delta = end_x - start_x
+        top_y = start_y - delta / 10
+        botttom_y = start_y + delta / 10
+
