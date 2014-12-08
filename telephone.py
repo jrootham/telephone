@@ -38,11 +38,11 @@ class Telephone:
         self.left_ear.draw(canvas)
         self.right_ear.draw(canvas)
 
-        fns.sideways(canvas, self.left_mic.connect(), self.poleList[0].right_point())
-        fns.up_down(canvas, self.left_ear.connect(), self.poleList[0].left_point())
+        fns.up_down(canvas, self.left_mic.connect(), self.poleList[0].right_point())
+        fns.sideways(canvas, self.left_ear.connect(), self.poleList[0].left_point())
 
-        fns.up_down(canvas, self.right_mic.connect(), self.poleList[2].right_point())
-        fns.sideways(canvas, self.right_ear.connect(), self.poleList[2].left_point())
+        fns.sideways(canvas, self.right_mic.connect(), self.poleList[2].left_point())
+        fns.up_down(canvas, self.right_ear.connect(), self.poleList[2].right_point())
 
 root = Tk()
 canvas = Canvas(bg='white', width = '7.5i', height = '7.5i')
