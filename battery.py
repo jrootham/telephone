@@ -2,10 +2,10 @@ __author__ = 'jrootham'
 
 import fns
 
-WIDTH = .25
+WIDTH = .5
 HEIGHT = .25
 HALF = WIDTH / 2
-DELTA = WIDTH / 8
+DELTA = WIDTH / 16
 
 class Battery:
 
@@ -22,11 +22,11 @@ class Battery:
 
     def draw(self, canvas):
         if (self.dir):
-            short_delta = -DELTA
-            long_delta = DELTA
-        else:
             short_delta = DELTA
             long_delta = -DELTA
+        else:
+            short_delta = -DELTA
+            long_delta = DELTA
 
         long_x = self.x + HALF + long_delta
         short_x = self.x + HALF + short_delta
